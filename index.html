@@ -31,7 +31,9 @@ h1,h2,h3,.bc{font-family:'Barlow Condensed',sans-serif}
 .topbar .phone{color:var(--orange);font-family:'Barlow Condensed';font-weight:800;font-size:24px;letter-spacing:1px;text-decoration:none}
 
 /* hero */
-.hero{background:linear-gradient(180deg,var(--navy) 0%,#0C2238 100%);color:#fff;text-align:center;padding:64px 0 72px}
+.hero{background:linear-gradient(180deg,var(--navy) 0%,#0C2238 100%);color:#fff;text-align:center;padding:64px 0 210px;position:relative;overflow:hidden}
+.hero .container{position:relative;z-index:1}
+.hero .scene{position:absolute;left:0;right:0;bottom:-6px;width:100%;height:auto;display:block;pointer-events:none}
 .hero h1{font-size:clamp(52px,9vw,96px);font-weight:800;letter-spacing:1px;line-height:.95;text-transform:uppercase}
 .hero h1 em{color:var(--orange);font-style:normal}
 .hero .sub{font-size:clamp(16px,2.5vw,20px);color:#C7D2DD;max-width:640px;margin:18px auto 8px;line-height:1.6}
@@ -97,6 +99,7 @@ footer b{color:#fff}
 }
 @media(max-width:480px){
   body{overflow-x:hidden}
+  .hero{padding-bottom:100px}
   .topbar svg{height:38px}
   .topbar .phone{font-size:19px}
   .hero h1{font-size:clamp(38px,12vw,52px)}
@@ -140,7 +143,83 @@ footer b{color:#fff}
     <a class="btn ghost" href="tel:+19547740720">Call (954) 774-0720</a>
   </div>
   <div class="badges"><span>Licensed &amp; Insured</span><span>5-Star Service, Guaranteed</span><span>Same-Day Available</span><span>Winter Haven Local</span></div>
-</div></div>
+</div>
+<svg class="scene" viewBox="0 0 1440 260" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+  <!-- sun -->
+  <circle cx="150" cy="66" r="36" fill="#F26A1B" opacity="0.85"/>
+  <circle cx="150" cy="66" r="50" fill="none" stroke="#F26A1B" stroke-width="3" opacity="0.25"/>
+  <!-- ground -->
+  <rect x="0" y="208" width="1440" height="52" fill="#0A1E33"/>
+  <line x1="0" y1="208" x2="1440" y2="208" stroke="#1C3A57" stroke-width="3"/>
+  <!-- palm left -->
+  <g opacity="0.9">
+    <rect x="52" y="140" width="14" height="70" rx="7" fill="#1C3A57"/>
+    <path d="M 59 142 C 30 128, 12 132, 2 146 C 24 146, 44 148, 59 150 Z" fill="#2E4A63"/>
+    <path d="M 59 142 C 88 128, 106 132, 116 146 C 94 146, 74 148, 59 150 Z" fill="#2E4A63"/>
+    <path d="M 59 142 C 46 118, 30 110, 12 112 C 30 124, 46 136, 59 148 Z" fill="#2E4A63"/>
+    <path d="M 59 142 C 72 118, 88 110, 106 112 C 88 124, 72 136, 59 148 Z" fill="#2E4A63"/>
+  </g>
+  <!-- palm right -->
+  <g opacity="0.9" transform="translate(1330,-6) scale(0.9)">
+    <rect x="52" y="140" width="14" height="78" rx="7" fill="#1C3A57"/>
+    <path d="M 59 142 C 30 128, 12 132, 2 146 C 24 146, 44 148, 59 150 Z" fill="#2E4A63"/>
+    <path d="M 59 142 C 88 128, 106 132, 116 146 C 94 146, 74 148, 59 150 Z" fill="#2E4A63"/>
+    <path d="M 59 142 C 46 118, 30 110, 12 112 C 30 124, 46 136, 59 148 Z" fill="#2E4A63"/>
+    <path d="M 59 142 C 72 118, 88 110, 106 112 C 88 124, 72 136, 59 148 Z" fill="#2E4A63"/>
+  </g>
+  <!-- box stack -->
+  <g>
+    <rect x="206" y="148" width="72" height="60" rx="6" fill="#F26A1B"/>
+    <rect x="236" y="148" width="14" height="60" fill="#FAF6EF" opacity="0.85"/>
+    <rect x="288" y="158" width="56" height="50" rx="6" fill="#D95A12"/>
+    <rect x="232" y="94" width="58" height="50" rx="6" fill="#F26A1B"/>
+    <rect x="256" y="94" width="11" height="50" fill="#FAF6EF" opacity="0.85"/>
+  </g>
+  <!-- crew carrying couch -->
+  <g>
+    <!-- left worker -->
+    <circle cx="492" cy="112" r="15" fill="#FAF6EF"/>
+    <rect x="474" y="130" width="36" height="52" rx="12" fill="#12314E" stroke="#1C3A57" stroke-width="2"/>
+    <rect x="474" y="138" width="36" height="16" fill="#F26A1B"/>
+    <rect x="477" y="182" width="13" height="26" rx="6" fill="#0A1E33"/>
+    <rect x="494" y="182" width="13" height="26" rx="6" fill="#0A1E33"/>
+    <rect x="504" y="132" width="34" height="11" rx="5" fill="#12314E"/>
+    <!-- couch -->
+    <rect x="536" y="106" width="164" height="30" rx="12" fill="#F26A1B"/>
+    <rect x="536" y="130" width="164" height="34" rx="10" fill="#D95A12"/>
+    <rect x="530" y="112" width="18" height="46" rx="8" fill="#F26A1B"/>
+    <rect x="688" y="112" width="18" height="46" rx="8" fill="#F26A1B"/>
+    <!-- right worker -->
+    <circle cx="744" cy="112" r="15" fill="#FAF6EF"/>
+    <rect x="726" y="130" width="36" height="52" rx="12" fill="#12314E" stroke="#1C3A57" stroke-width="2"/>
+    <rect x="726" y="138" width="36" height="16" fill="#F26A1B"/>
+    <rect x="729" y="182" width="13" height="26" rx="6" fill="#0A1E33"/>
+    <rect x="746" y="182" width="13" height="26" rx="6" fill="#0A1E33"/>
+    <rect x="698" y="132" width="34" height="11" rx="5" fill="#12314E"/>
+  </g>
+  <!-- ramp -->
+  <polygon points="880,208 952,168 952,180 894,208" fill="#1C3A57"/>
+  <!-- truck -->
+  <g>
+    <rect x="950" y="58" width="266" height="122" rx="10" fill="#FAF6EF"/>
+    <g transform="translate(1040,76) scale(0.4)">
+      <path d="M 110 6 L 204 34 V 104 C 204 156, 168 196, 110 214 C 52 196, 16 156, 16 104 V 34 Z" fill="#12314E"/>
+      <path d="M 110 20 L 190 44 V 104 C 190 148, 160 182, 110 199 C 60 182, 30 148, 30 104 V 44 Z" fill="none" stroke="#F26A1B" stroke-width="4"/>
+      <g transform="translate(46,52) scale(0.54)">
+        <rect x="78" y="44" width="84" height="68" rx="8" fill="#F26A1B"/>
+        <path d="M 44 96 C 46 146, 74 166, 106 169" fill="none" stroke="#FAF6EF" stroke-width="18" stroke-linecap="round"/>
+        <path d="M 196 96 C 194 146, 166 166, 134 169" fill="none" stroke="#FAF6EF" stroke-width="18" stroke-linecap="round"/>
+      </g>
+    </g>
+    <rect x="1216" y="106" width="86" height="74" rx="10" fill="#F26A1B"/>
+    <rect x="1230" y="118" width="42" height="28" rx="5" fill="#C7D2DD"/>
+    <rect x="1216" y="164" width="86" height="16" fill="#D95A12"/>
+    <circle cx="1002" cy="196" r="25" fill="#0A1E33" stroke="#FAF6EF" stroke-width="6"/>
+    <circle cx="1176" cy="196" r="25" fill="#0A1E33" stroke="#FAF6EF" stroke-width="6"/>
+    <circle cx="1276" cy="196" r="25" fill="#0A1E33" stroke="#FAF6EF" stroke-width="6"/>
+  </g>
+</svg>
+</div>
 
 <div class="offer">FOUNDING CUSTOMER OFFER — <b>20% OFF</b> our first 10 booked jobs. Mention this page.</div>
 
